@@ -1,0 +1,26 @@
+<!-- for loop -->
+<div class="row">
+    <div class="col-lg-4">
+        <app-add-todo (todoAdd)="addTodo($event)" ></app-add-todo>
+    </div>
+    <div class="col-lg-8">
+        <div class="border border-dark border-2 m-2 p-3">
+            <h4 class="text-center">Your Todos</h4>
+            <!-- if block below-->
+            <div *ngIf="this.todos.length===0; else elseBlock"><span class="text-danger fw-bold">
+                No Todos to Display</span>
+            </div>
+            <!-- else block below -->
+            <ng-template #elseBlock>
+                <div *ngFor="let todo of todos;index as i">
+                    <!-- here we are re-routing the scope to app-todo-item and take a CUSTOM ATTRIBUTE with you and 
+                    the name of that custom attribute is todo   -->
+                    <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)" 
+                    (todoCheckbox)="toggleTodo($event)"></app-todo-item>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
+
+

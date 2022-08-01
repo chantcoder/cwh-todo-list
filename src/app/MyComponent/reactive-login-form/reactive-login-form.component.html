@@ -1,0 +1,23 @@
+<div class="container-fluid">
+   <!--  row 1 -->
+    <form formGroup="csdForm">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <label for="country">Select Country</label>
+                <Select class="form-control" formControlName = 'country' >
+                    <div *ngFor="let state of states">
+                        <option value="{{state}}">{{state}}</option>
+                    </div>
+                </Select>
+            </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</form>
+</div>

@@ -1,0 +1,30 @@
+<div class="shadow-lg bg-primary pt-2 pb-2 text-center text-white">
+  <h3>{{title}}</h3>
+  <!-- <app-root></app-root> -->
+</div>
+<div class="row m-0">
+  <div class="col-lg-12">
+    <app-navigation></app-navigation>
+  </div>
+  <div class="col-lg-12">
+    <div class="row">
+      <div class="col-lg-2 border bg-info">
+          <app-left-navigation></app-left-navigation>
+        </div>
+      <div class="col-lg-10 border m-auto p-3">
+        <!-- HERE WE ARE USING ROUTER OUTLET INSTEAD OF ELEMENT ROUTING. FOR 
+        ROUTING WE ARE USING ROUTER-OUTLET TAG -->
+        <!-- <app-todos></app-todos> -->
+        <router-outlet></router-outlet>
+      </div>
+      <!-- <div class="col-lg-3 border">
+          <app-aside></app-aside>
+        </div> -->
+    </div>
+  </div>
+</div>
+<div class="shadow-lg bg-primary pt-2 pb-2 text-center text-white fixed-bottom" style="bottom:0;">
+  <div class="col-lg-12">
+    <app-footer></app-footer>
+  </div>
+</div>
